@@ -12,14 +12,18 @@ func main() {
 	previous_reading := 0
 	increases := 0
 
+	// load file
 	f, _ := os.Open("1.txt")
 	scanner := bufio.NewScanner(f)
+
 	for scanner.Scan() {
 		line := scanner.Text()
 		previous_reading = current_reading
-		current_reading, _ = strconv.Atoi(line)
 
 		// convert line to integer
+		current_reading, _ = strconv.Atoi(line)
+
+		// only increase if there was a positive change
 		if previous_reading != 0 && current_reading > previous_reading {
 			increases += 1 
 		}
