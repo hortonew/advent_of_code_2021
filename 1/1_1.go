@@ -1,9 +1,9 @@
 package main
 
 import (
-	"fmt" // print
-	"os" // read file
-	"bufio" // file scanner
+	"bufio"   // file scanner
+	"fmt"     // print
+	"os"      // read file
 	"strconv" // string to int
 )
 
@@ -25,7 +25,7 @@ func main() {
 
 		// only increase if there was a positive change
 		if previous_reading != 0 && current_reading > previous_reading {
-			increases += 1 
+			increases += 1
 		}
 	}
 	fmt.Println(increases)
