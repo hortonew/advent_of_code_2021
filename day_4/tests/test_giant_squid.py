@@ -5,6 +5,7 @@ from day_4.main_4_1 import (
     is_winning_board,
     play,
 )
+from day_4.main_4_2 import play as play_loser
 
 
 @pytest.fixture
@@ -67,3 +68,7 @@ def test_is_winning_board_by_column(sample):
 
 def test_play(sample):
     assert play(sample[0], sample[1]) == 4512
+
+
+def test_play_last_board_to_win(sample):
+    assert play_loser(sample[0], sample[1], get_last_place=True) == 1924
