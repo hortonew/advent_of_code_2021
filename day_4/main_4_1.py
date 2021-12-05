@@ -76,7 +76,6 @@ def is_winning_board(board: Board, played_numbers: List[str]) -> bool:
     # Build board structure based on what was called and what matters
     for row_idx, row in enumerate(board.board):
         for col_idx, column in enumerate(row):
-            # print(f'{row_idx=}, {col_idx=}')
             if board.board[row_idx][col_idx] in numbers_that_matter:
                 board_struct[row_idx][col_idx] = 1
 
@@ -104,11 +103,8 @@ def get_answer(board: Board, played_numbers: List[str]) -> int:
     )
 
     last_played = played_numbers[-1]
-    print(f'{last_played=}')
 
     sum_of_unplayed = sum(int(x) for x in unplayed_numbers)
-    print(f'{unplayed_numbers=}')
-    print(f'{sum_of_unplayed=}')
     return int(last_played) * sum_of_unplayed
 
 
