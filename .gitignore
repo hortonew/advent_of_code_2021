@@ -1,1 +1,11 @@
 __pycache__
+.coverage
+.DS_Store
+.env
+.pytest_cache
+.python-version
+.venv
+.vscode
+*.egg-info
+*.pyc
+*.swp

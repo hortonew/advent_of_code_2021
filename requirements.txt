@@ -1,0 +1,7 @@
+mypy
+pytest 
+pytest-cov 
+pytest-sugar 
+flake8 
+blue 
+isort 
